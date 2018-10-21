@@ -2675,7 +2675,7 @@ body.is-preload #header footer {
   textarea,
   select {
     font-size: 16pt;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
 
   /* Header */
