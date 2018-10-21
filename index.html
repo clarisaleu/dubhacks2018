@@ -58,12 +58,21 @@
 	</section>
 
 
-
+	<section id="second-1" class="banner-2nd">
+	  <article>
+	    <header>
+	      <iframe width="1200" height="550" frameborder="0" style="border:0" src="/total.html"></iframe>
+	    </header>
+	    <footer>
+	      <a href="#second-2" class="button style2 scrolly-55">Next</a>
+	    </footer>
+	  </article>
+	</section>
 
 
 	<!-- 1/30 -->
 
-	<section id="second-1" class=" box-body first-vis">
+	<section id="second-2" class=" box-body first-vis">
 		<header>
 			<h1>Meet Sabrina...</h1>
 			<!-- <h2>1 in 30 People Are Homeless in the Seattle Area...</h2> -->
@@ -349,8 +358,14 @@
 			document.onkeydown = null;
 		}
 
+		// disable scrolling - james
 		document.onload = disableScroll();
+		// force scroll to top - james
 		window.onbeforeunload = function () { window.scrollTo(0, 0); }
+		$(document).ready(function(){
+    	$(this).scrollTop(0);
+		});
+		// hide scrollbar
 		document.body.style.overflow = 'hidden';
 
 		// Example
