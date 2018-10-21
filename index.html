@@ -467,23 +467,12 @@
 
 		var audio = new Audio('audios/John Cena Sound Clip.mp3');
 
-		function playAudio (hobo) {
-			if (hobo != "") {
-				console.log(hobo);
-				audio.play();
-			} else {
-				console.log(hobo);
-				var audioSrc = new Audio(audioArray[Math.floor(Math.random() * 5)]);
-				audioSrc.play();
-			}
-		}
-
 		var audioArray = new Array(
-			new Audio('audios/Kerry.mp3'), 
-			new Audio('audios/Panda.mp3'), 
-			new Audio('audios/Sabrina.mp3'), 
-			new Audio('audios/Theresa.mp3'), 
-			new Audio('audios/Jennifer.mp3')
+			'audios/Kerry.mp3', 
+			'audios/Panda.mp3', 
+			'audios/Sabrina.mp3', 
+			'audios/Theresa.mp3', 
+			'audios/Jennifer.mp3'
 			);
 
 		// window.scrollTo(500, 0);
@@ -491,18 +480,20 @@
 		pplVis.selectAll("image")
 			.on("mouseover", function () {
 				d3.select("#headline").text(this.id);
-				if ("Jake" != d3.select("#headline").text(this.id)) {
-					console.log(hobo);
+				if ("Jake" != this.id) {
 					audio.play();
 				} else {
-					console.log(hobo);
 					var audioSrc = new Audio(audioArray[Math.floor(Math.random() * 5)]);
 					audioSrc.play();
 				}
 			}
 			)
 			.on("mouseout", function () {
-				d3.select("#headline").text("Select Person For Story")
+				d3.select("#headline").text("Select Person For Story");
+				audio.pause();
+				audio.currentTime = 0;
+				audioSrc.pause();
+				audioSrc.currentTime = 0;
 			})
 
 		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
