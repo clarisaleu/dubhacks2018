@@ -34,11 +34,11 @@
 		<article>
 			<header>
 				<div class="space-fix-top"></div>
-				<h2>1 in 30 People Are Homeless in the Seattle Area...</h2>
+				<h2>1 in 30 People Are Homeless in the Seattle Area</h2>
 			</header>
 			<svg id="pplVis" width=1050 height=265></svg>
 			<footer>
-				<a href="#second" onclick=city2.play() class="button style2 scrolly-3">Next</a>
+				<a href="#second" class="button style2 scrolly-3">Next</a>
 				<div class="space-fix-bottom"></div>
 			</footer>
 		</article>
@@ -52,7 +52,7 @@
 		</header>
 		<footer>
 			<center>
-				<a href="#second-2" class="button style1 scrolly-45">Listen to their stories</a>
+				<a href="#second-2" onclick=c ity2.play() class="button style1 scrolly-45 centeredbtn">Listen to Sabrina's story</a>
 			</center>
 			<div class="space-fix-bottom"></div>
 			<div class="space-fix-bottom"></div>
@@ -63,14 +63,14 @@
 
 	<section id="second-2" class=" box-body first-vis">
 		<header>
-			<h1 class="space-fix-top-1">Meet Sabrina...</h1>
+			<h1 class="space-fix-top-1">Hover over Sabrina to hear her story</h1>
 			<!-- <h2>1 in 30 People Are Homeless in the Seattle Area...</h2> -->
 			<!-- <p class="padding-p">Homeless people are a diverese varied group in terms of their backgrounds.</p> -->
 		</header>
 		<img onmouseover=audioh3.play(); class="img-big" src="images/man-white.png">
 		<!-- <p id="headline">Select Person To View Their Story</p> -->
 		<footer>
-			<a href="#second-12" onclick=city3.play();audioh3.pause(); class="button style2 scrolly-2">Next</a>
+			<a href="#second-12" onclick=c ity3.play();audioh3.pause(); class="button style2 scrolly-2">More stories</a>
 		</footer>
 	</section>
 
@@ -79,11 +79,11 @@
 	<section id="second-12" class="banner-2nd">
 		<article>
 			<header>
-				<h2> Hover to hear their stories</h2>
+				<h2>Hover over to hear their stories</h2>
 			</header>
 			<svg id="pplVis2" width=1350 height=450></svg>
 			<footer>
-				<a href="#fourth-4" class="button style2 scrolly-55" onclick="enableScroll();document.body.style.overflow = 'visible';">Next</a>
+				<a href="#fourth-4" onclick=c ity.pause(); class="button style2 scrolly-55" onclick="enableScroll();document.body.style.overflow = 'visible';">View homelessness in Washington</a>
 			</footer>
 		</article>
 	</section>
@@ -100,12 +100,6 @@
 			</footer>
 		</article>
 	</section>
-
-
-
-
-
-
 
 	<section id="third-31" class="box-body first-vis">
 		<header>
@@ -127,10 +121,6 @@
 
 
 	</section>
-
-
-
-
 
 	<!-- Feature 2 -->
 	<article id="fourth" class="container box style1 left">
@@ -421,7 +411,6 @@
 		for (var i = 0; i < 5; i++) {
 			for (var j = 0; j < 50; j++) {
 				if (i == 2 && j == 3) {
-					console.log(i);
 					pplVis2.append("image")
 						.attr("href", "./images/man-gray.png")//"./man-yellow.png")
 						.attr("width", 70)
@@ -429,7 +418,6 @@
 						.attr("y", i * (height / 3))
 						.attr("id", "Kerry");
 				} else if (i == 3 && j == 25) {
-					console.log(i);
 					pplVis2.append("image")
 						.attr("href", "./images/man-gray.png")//"./man-red.png")
 						.attr("width", 70)
@@ -437,7 +425,6 @@
 						.attr("y", i * (height / 3))
 						.attr("id", "Panda");
 				} else if (i == 1 && j == 30) {
-					console.log(i);
 					pplVis2.append("image")
 						.attr("href", "./images/man-gray.png")//"./man-blue.png")
 						.attr("width", 70)
@@ -445,7 +432,6 @@
 						.attr("y", i * (height / 3))
 						.attr("id", "Jennifer");
 				} else if (i == 4 && j == 12) {
-					console.log(i);
 					pplVis2.append("image")
 						.attr("href", "./images/man-gray.png")//"./man-purple.png")
 						.attr("width", 70)
@@ -453,7 +439,6 @@
 						.attr("y", i * (height / 3))
 						.attr("id", "Theresa");
 				} else if (i == 0 && j == 22) {
-					console.log(i);
 					pplVis2.append("image")
 						.attr("href", "./images/man-gray.png")//"./man-purple.png")
 						.attr("width", 70)
