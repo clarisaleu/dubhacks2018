@@ -23,18 +23,18 @@
 
 
 	<!-- Banner  HOW TO LOAD / APPEND SVG-->
-	<!-- <section id="banner">
+	<section id="banner">
 		<header>
 			<h2>Homelessness in Seattle</h2>
 			<p>An In Depth Look and Analysis</p>
 		</header>
-		<svg id="intro" width=1210 height=300></svg>
+		<svg id="pplVis" width=1210 height=300></svg>
 		<footer>
 			<a href="#first" class="button style2 scrolly">Learn More</a>
 		</footer>
-	</section> -->
+	</section>
 
-	<!-- Header-->
+	<!-- Header
 	<section id="header">
 		<header>
 			<h1>Homelessness in Seattle</h1>
@@ -43,7 +43,7 @@
 		<footer>
 			<a href="#banner" class="button style2 scrolly-middle">Learn More</a>
 		</footer>
-	</section>
+	</section> -->
 
 	<!-- Banner -->
 	<section id="banner">
@@ -59,6 +59,8 @@
 			<a href="#first" class="button style2 scrolly">Act on this message</a>
 		</footer>
 	</section>
+
+
 
 	<!-- Feature 1 -->
 	<article id="first" class="container box style1 right">
@@ -380,11 +382,43 @@
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.js"></script>
 	<script>
+
+		// Example
 		var intro = d3.select("#intro");
 		var randomBox = intro.append("circle")
 			.attr("cx", 30)
 			.attr("cy", 30)
 			.attr("r", 20);
+
+
+		var w = 300;
+		var h = 300;
+		var p = 20;
+
+		var svg = d3.select("body")
+			.append("svg")
+			.attr("width", w)
+			.attr("height", h)
+			.style("border", "1px solid black");
+
+		var img = svg.selectAll("image")
+			.data(dataset)
+			.enter()
+			.append("svg:image")
+			.attr("x", function (d, i) { return (i * 10); })
+			.attr("width", 50)
+			.attr("height", 50)
+			.style("border", "1px solid black")
+			.attr("xlink:href", "./man.png");
+
+		// Code to load one person
+		var pplVis = d3.select("#pplVis");
+		var peoplePic = pplVis.append("image")
+			.attr("href", "./man.png")
+			.attr("width", 70)
+			.attr("x", textSvg.attr("width") / 2 + 470)
+			.attr("y", 9);
+
 	</script>
 </body>
 
