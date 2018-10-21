@@ -54,7 +54,7 @@
   $('.scrolly-555').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : 0;
+      return breakpoints.active('<=mobile') ? 70 : 10;
     }
   });
   $('.scrolly-5').scrolly({
