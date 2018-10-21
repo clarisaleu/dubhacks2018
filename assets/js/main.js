@@ -5,101 +5,126 @@
 */
 
 (function($) {
+  var $window = $(window),
+    $body = $('body'),
+    settings = {
+      // Parallax background effect?
+      parallax: true,
 
-	var	$window = $(window),
-		$body = $('body'),
-		settings = {
+      // Parallax factor (lower = more intense, higher = less intense).
+      parallaxFactor: 10
+    };
 
-			// Parallax background effect?
-				parallax: true,
+  // Breakpoints.
+  breakpoints({
+    wide: ['1081px', '1680px'],
+    normal: ['841px', '1080px'],
+    narrow: ['737px', '840px'],
+    mobile: [null, '736px']
+  });
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 10
+  // Mobile?
+  if (browser.mobile) $body.addClass('is-scroll');
 
-		};
+  // Play initial animations on page load.
+  $window.on('load', function() {
+    window.setTimeout(function() {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
 
-	// Breakpoints.
-		breakpoints({
-			wide:    [ '1081px',  '1680px' ],
-			normal:  [ '841px',   '1080px' ],
-			narrow:  [ '737px',   '840px'  ],
-			mobile:  [ null,      '736px'  ]
-		});
+  // Scrolly.
+  $('.scrolly-middle').scrolly({
+    speed: 1000,
+    anchor: 'middle'
+  });
 
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-scroll');
+  $('.scrolly').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 190;
+    }
+  });
+  $('.scrolly-55').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 5;
+    }
+  });
+  $('.scrolly-5').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 70;
+    }
+  });
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  $('.scrolly-3').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 140;
+    }
+  });
 
-	// Scrolly.
-		$('.scrolly-middle').scrolly({
-			speed: 1000,
-			anchor: 'middle'
-		});
+  $('.scrolly-45').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 150;
+    }
+  });
+  //Scrolly2
+  $('.scrolly-2').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : -60;
+    }
+  });
 
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return (breakpoints.active('<=mobile') ? 70 : 190); }
-		});
+  // Parallax background.
 
-	// Parallax background.
+  // Disable parallax on IE/Edge (smooth scrolling is jerky), and on mobile platforms (= better performance).
+  if (browser.name == 'ie' || browser.name == 'edge' || browser.mobile)
+    settings.parallax = false;
 
-		// Disable parallax on IE/Edge (smooth scrolling is jerky), and on mobile platforms (= better performance).
-			if (browser.name == 'ie'
-			||	browser.name == 'edge'
-			||	browser.mobile)
-				settings.parallax = false;
+  if (settings.parallax) {
+    var $dummy = $(),
+      $bg;
 
-		if (settings.parallax) {
+    $window
+      .on('scroll.overflow_parallax', function() {
+        // Adjust background position.
+        $bg.css(
+          'background-position',
+          'center ' +
+            -1 * (parseInt($window.scrollTop()) / settings.parallaxFactor) +
+            'px'
+        );
+      })
+      .on('resize.overflow_parallax', function() {
+        // If we're in a situation where we need to temporarily disable parallax, do so.
+        if (breakpoints.active('<=narrow')) {
+          $body.css('background-position', '');
+          $bg = $dummy;
+        }
 
-			var $dummy = $(), $bg;
+        // Otherwise, continue as normal.
+        else $bg = $body;
 
-			$window
-				.on('scroll.overflow_parallax', function() {
+        // Trigger scroll handler.
+        $window.triggerHandler('scroll.overflow_parallax');
+      })
+      .trigger('resize.overflow_parallax');
+  }
 
-					// Adjust background position.
-						$bg.css('background-position', 'center ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-
-				})
-				.on('resize.overflow_parallax', function() {
-
-					// If we're in a situation where we need to temporarily disable parallax, do so.
-						if (breakpoints.active('<=narrow')) {
-
-							$body.css('background-position', '');
-							$bg = $dummy;
-
-						}
-
-					// Otherwise, continue as normal.
-						else
-							$bg = $body;
-
-					// Trigger scroll handler.
-						$window.triggerHandler('scroll.overflow_parallax');
-
-				})
-				.trigger('resize.overflow_parallax');
-
-		}
-
-	// Poptrox.
-		$('.gallery').poptrox({
-			useBodyOverflow: false,
-			usePopupEasyClose: false,
-			overlayColor: '#0a1919',
-			overlayOpacity: 0.75,
-			usePopupDefaultStyling: false,
-			usePopupCaption: true,
-			popupLoaderText: '',
-			windowMargin: 10,
-			usePopupNav: true
-		});
-
+  // Poptrox.
+  $('.gallery').poptrox({
+    useBodyOverflow: false,
+    usePopupEasyClose: false,
+    overlayColor: '#0a1919',
+    overlayOpacity: 0.75,
+    usePopupDefaultStyling: false,
+    usePopupCaption: true,
+    popupLoaderText: '',
+    windowMargin: 10,
+    usePopupNav: true
+  });
 })(jQuery);

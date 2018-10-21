@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Homelessness in Seattle</title>
+	<title>Homeless in Seattle</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,49 +19,101 @@
 
 
 <body class="is-preload">
-
-
-
-	<!-- Banner -->
-	<section id="banner">
-		<header>
-			<h2>Homelessness in Seattle</h2>
-			<p>An In Depth Look and Analysis</p>
-		</header>
-		<svg id="intro" width=1210 height=500></svg>
-		<footer>
-			<a href="#first" class="button style2 scrolly">Learn More</a>
-		</footer>
-	</section>
-
-	<!-- Header
 	<section id="header">
 		<header>
-			<h1>Homelessness in Seattle</h1>
-			<p>An In Depth Look and Analysis</p>
+			<h1>A Public Project: Homeless in Seattle</h1>
+			<p>What are you waiting for...?</p>
 		</header>
 		<footer>
-			<a href="#banner" class="button style2 scrolly-middle">Learn More</a>
-		</footer>
-	</section> -->
-
-	<!-- Banner -->
-	<section id="banner">
-		<header>
-			<h2>Scope</h2>
-		</header>
-		<p>More than __ amount of individuals make up the underserved homeless population in Seattle, WA. In comparison, the average
-			homeless person per 100k in the United States is ____ amount of people. The purpose of this project is to help the general
-			public understand the severity of homelessness in the Seattle area through powerful visuals which hopefully speak for
-			themselves. We hope to provide the general public with a clear understanding of the scope of this issue in Seattle. The
-			purpose of this project is also to apply possible solutions to the homelessness in Sea</p>
-		<footer>
-			<a href="#first" class="button style2 scrolly">Act on this message</a>
+			<a href="#banner" onclick=c ity.play();city1.play(); class="button style2 scrolly-middle">Learn More</a>
 		</footer>
 	</section>
 
+
+
+
+
+	<!-- Banner  HOW TO LOAD / APPEND SVG (2nd visual) -->
+	<section id="banner">
+		<article>
+			<header>
+				<h2>1 in 30 People Are Homeless in the Seattle Area...</h2>
+			</header>
+			<svg id="pplVis" width=1050 height=265></svg>
+			<footer>
+				<a href="#second" onclick=city2.play() class="button style2 scrolly-3">Next</a>
+			</footer>
+		</article>
+	</section>
+
+	<section id="second" class="box-body">
+		<header>
+			<h2 class="style-intro-1">Most people know how big of a social issue homelessness is, however a lot of people don't understand what it's actually
+				like to be homeless...</h2>
+		</header>
+		<footer>
+			<a href="#second-1" class="button style1 scrolly-45 centeredbtn">Listen to their stories</a>
+		</footer>
+
+	</section>
+
+
+
+
+
+	<!-- 1/30 -->
+
+	<section id="second-1" class=" box-body first-vis">
+		<header>
+			<h1>Meet Sabrina...</h1>
+			<!-- <h2>1 in 30 People Are Homeless in the Seattle Area...</h2> -->
+			<!-- <p class="padding-p">Homeless people are a diverese varied group in terms of their backgrounds.</p> -->
+		</header>
+		<img onmouseover=audioh3.play(); class="img-big" src="images/man-white.png">
+		<!-- <p id="headline">Select Person To View Their Story</p> -->
+		<footer>
+			<a href="#third-3" onclick=c ity3.play();audioh3.pause(); class="button style2 scrolly-2">Next</a>
+		</footer>
+	</section>
+
+
+
+
+
+
+	<!-- In depth look at people-->
+	<section id="third-3" class="banner-2nd">
+		<article>
+			<header>
+				<h2> Hover to hear their stories...</h2>
+			</header>
+			<svg id="pplVis2" width=1350 height=450></svg>
+			<footer>
+				<a href="#fourth-4" class="button style2 scrolly-55" onclick="enableScroll();document.body.style.overflow = 'visible';">Next</a>
+			</footer>
+		</article>
+	</section>
+
+
+	<section id="fourth-4" class="box-body first-vis">
+		<header>
+			<h1 id="vis">Available Resources in Seattle</h1>
+			<iframe width="1200" height="550" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCpDY2_16tkbiyAzzJEloJ3e1uGxdcmU4M&q=homeless+in+Seattle"
+			 allowfullscreen>
+			</iframe>
+		</header>
+
+		<footer>
+			<a href="#fourth" class="button style2 scrolly-2">Next</a>
+		</footer>
+
+
+	</section>
+
+
+
 	<!-- Feature 1 -->
-	<article id="first" class="container box style1 right">
+	<article id="fourth" class="container box style1 right">
 		<a href="#" class="image fit">
 			<img src="images/pic01.jpg" alt="" />
 		</a>
@@ -78,79 +130,88 @@
 	<!-- Feature 2 -->
 	<article class="container box style1 left">
 		<a href="#" class="image fit">
-			<img src="images/pic02.jpg" alt="" />
+			<img src="images/seattle.jpg" alt="" />
 		</a>
 		<div class="inner">
 			<header>
-				<h2>Mollis posuere
-					<br /> lectus lacus</h2>
+				<h2>About This Project
+					<br /> </h2>
 			</header>
-			<p>Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum
-				dolor.
+			<p>This project was made in order to help inform the general public about the severity of displaced homeless individuals
+				in the Seattle Area and provide a platform for change in the community.
 			</p>
 		</div>
 	</article>
 
-	<!-- Portfolio -->
+
+
+	<article class="container box style3">
+		<header>
+			<h2>Community Highlights</h2>
+		</header>
+		<section>
+			<header>
+				<h3>Josh Jacob James</h3>
+				<p>Member</p>
+			</header>
+			<p>Description</p>
+		</section>
+		</section>
+	</article>
+
+	<!-- People -->
 	<article class="container box style2">
 		<header>
-			<h2>Magnis parturient</h2>
-			<p>Justo phasellus et aenean dignissim
-				<br /> placerat cubilia purus lectus.</p>
+			<h2>People</h2>
+			<p>Read More About Us
+				<br />
+			</p>
 		</header>
 		<div class="inner gallery">
 			<div class="row gtr-0">
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/01.jpg" class="image fit">
-						<img src="images/thumbs/01.jpg" alt="" title="Ad infinitum" />
+				<div class="col-4 col-12-mobile">
+					<a href="images/james-full.jpg" class="image fit">
+						<img src="images/james.jpg" alt="" title="James is a graduate student at UW." />
 					</a>
 				</div>
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/02.jpg" class="image fit">
-						<img src="images/thumbs/02.jpg" alt="" title="Dressed in Clarity" />
+				<div class="col-4 col-12-mobile">
+					<a href="images/dubhacks-full.jpg_large" class="image fit">
+						<img src="images/dubhacks-1.jpg" alt="" title="This project was made at DubHacks 2018!" />
 					</a>
 				</div>
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/03.jpg" class="image fit">
-						<img src="images/thumbs/03.jpg" alt="" title="Raven" />
+				<div class="col-4 col-12-mobile">
+					<a href="images/claire-full.jpg" class="image fit">
+						<img src="images/claire.jpg" alt="" title="Claire Leu is a full time Computer Science at UW!" />
 					</a>
 				</div>
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/04.jpg" class="image fit">
-						<img src="images/thumbs/04.jpg" alt="" title="I'll have a cup of Disneyland, please" />
+				<div class="col-4 col-12-mobile">
+					<a href="images/gideon-full.jpg" class="image fit">
+						<img src="images/gideon.jpg" alt="" title="Gideon Chia is Claire's RA :)" />
 					</a>
 				</div>
-			</div>
-			<div class="row gtr-0">
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/05.jpg" class="image fit">
-						<img src="images/thumbs/05.jpg" alt="" title="Cherish" />
+				<div class="col-4 col-12-mobile">
+					<a href="images/sohaib-full.jpg" class="image fit">
+						<img src="images/sohaib-1.jpg" alt="" title="Sohaib Moinuddin is a full time Computer Science Student at UW!" />
 					</a>
 				</div>
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/06.jpg" class="image fit">
-						<img src="images/thumbs/06.jpg" alt="" title="Different." />
+				<div class="col-4 col-12-mobile">
+					<a href="images/linh-full.jpg" class="image fit">
+						<img src="images/linh.jpg" alt="" title="Linh Vuu is an incoming IBM IoT Consultant who recently graduated from Cornell University."
+						/>
 					</a>
 				</div>
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/07.jpg" class="image fit">
-						<img src="images/thumbs/07.jpg" alt="" title="History was made here" />
-					</a>
-				</div>
-				<div class="col-3 col-12-mobile">
-					<a href="images/fulls/08.jpg" class="image fit">
-						<img src="images/thumbs/08.jpg" alt="" title="People come and go and walk away" />
-					</a>
-				</div>
+
 			</div>
 		</div>
+		</div>
 	</article>
+
 
 	<!-- Contact -->
 	<article class="container box style3">
 		<header>
-			<h2>Nisl sed ultricies</h2>
-			<p>Diam dignissim lectus eu ornare volutpat orci.</p>
+			<h2>Contact Homeless In Seattle Inc.</h2>
+			<p>Questions, Comments, Concerns, & Suggestions</p>
 		</header>
 		<form method="post" action="#">
 			<div class="row gtr-50">
@@ -174,218 +235,379 @@
 		</form>
 	</article>
 
-	<!-- Generic -->
-	<!--
-			<article class="container box style3">
-				<header>
-					<h2>Generic Box</h2>
-					<p>Just a generic box. Nothing to see here.</p>
-				</header>
-				<section>
-					<header>
-						<h3>Paragraph</h3>
-						<p>This is a subtitle</p>
-					</header>
-					<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-					habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-					leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-					amet risus elit.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Blockquote</h3>
-					</header>
-					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-					tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-				</section>
-				<section>
-					<header>
-						<h3>Divider</h3>
-					</header>
-					<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia.</p>
-					<hr />
-					<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Unordered List</h3>
-					</header>
-					<ul>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ul>
-				</section>
-				<section>
-					<header>
-						<h3>Ordered List</h3>
-					</header>
-					<ol>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ol>
-				</section>
-				<section>
-					<header>
-						<h3>Table</h3>
-					</header>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>45815</td>
-									<td>Something</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>24524</td>
-									<td>Nothing</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>45815</td>
-									<td>Something</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>24524</td>
-									<td>Nothing</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>19.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="3"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-				<section>
-					<header>
-						<h3>Form</h3>
-					</header>
-					<form method="post" action="#">
-						<div class="row">
-							<div class="col-6 col-12-mobile">
-								<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
-							</div>
-							<div class="col-6 col-12-mobile">
-								<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-							</div>
-							<div class="col-12">
-								<select name="department" id="department">
-									<option value="">Choose a department</option>
-									<option value="1">Manufacturing</option>
-									<option value="2">Administration</option>
-									<option value="3">Support</option>
-								</select>
-							</div>
-							<div class="col-12">
-								<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-							</div>
-							<div class="col-12">
-								<textarea name="message" id="message" placeholder="Enter your message"></textarea>
-							</div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><input type="submit" value="Submit" /></li>
-									<li><input type="reset" class="style3" value="Clear Form" /></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</section>
-			</article>
-		-->
 
-	<section id="footer">
-		<ul class="icons">
-			<li>
-				<a href="#" class="icon fa-twitter">
-					<span class="label">Twitter</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-facebook">
-					<span class="label">Facebook</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-google-plus">
-					<span class="label">Google+</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-pinterest">
-					<span class="label">Pinterest</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-dribbble">
-					<span class="label">Dribbble</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-linkedin">
-					<span class="label">LinkedIn</span>
-				</a>
-			</li>
-		</ul>
-		<div class="copyright">
-			<ul class="menu">
-				<li>&copy; Untitled. All rights reserved.</li>
-				<li>Design:
-					<a href="http://html5up.net">HTML5 UP</a>
+
+	<<<<<<< HEAD=======< !-->>>>>>> 733f9c257099ef4b4596984383bf1ec8f8bd5912
+
+
+
+
+		<!-- PAYMENT
+	<form id="paymentForm" method="POST" action="https://YourServer/PathToExistingPaymentProcessingScript">
+		<input type="text" name="cardNumber" id="cardNumber" placeholder="cardNumber" />
+		<br>
+		<br>
+		<input type="text" name="expMonth" id="expMonth" placeholder="expMonth" />
+		<br>
+		<br>
+		<input type="text" name="expYear" id="expYear" placeholder="expYear" />
+		<br>
+		<br>
+		<input type="text" name="cardCode" id="cardCode" placeholder="cardCode" />
+		<br>
+		<br>
+		<input type="hidden" name="dataValue" id="dataValue" />
+		<input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+		<button>Pay</button>
+	</form> -->
+
+
+		<section id="footer">
+			<ul class="icons">
+				<li>
+					<a href="#" class="icon fa-twitter">
+						<span class="label">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-facebook">
+						<span class="label">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-google-plus">
+						<span class="label">Google+</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-pinterest">
+						<span class="label">Pinterest</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-dribbble">
+						<span class="label">Dribbble</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-linkedin">
+						<span class="label">LinkedIn</span>
+					</a>
 				</li>
 			</ul>
-		</div>
-	</section>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; DubHacks 2018. All rights reserved.</li>
+					<li>
+						<a href="https://clarisaleu.github.io/dubhacks2018">Homeless in Seattle</a>
+					</li>
+				</ul>
+			</div>
 
-	<!-- Scripts -->
+		</section>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/topojson.v2.min.js"></script>
-	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.js"></script>
-	<script>
-		var intro = d3.select("#intro");
-		var randomBox = intro.append("circle")
-			.attr("cx", 30)
-			.attr("cy", 30)
-			.attr("r", 20);
-	</script>
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/topojson.v2.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.js"></script>
+		<script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8">
+		</script>
+		<script>
+			// left: 37, up: 38, right: 39, down: 40,
+			// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+			var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+			function preventDefault(e) {
+				e = e || window.event;
+				if (e.preventDefault)
+					e.preventDefault();
+				e.returnValue = false;
+			}
+
+			function preventDefaultForScrollKeys(e) {
+				if (keys[e.keyCode]) {
+					preventDefault(e);
+					return false;
+				}
+			}
+
+			function disableScroll() {
+				if (window.addEventListener) // older FF
+					window.addEventListener('DOMMouseScroll', preventDefault, false);
+				window.onwheel = preventDefault; // modern standard
+				window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+				window.ontouchmove = preventDefault; // mobile
+				document.onkeydown = preventDefaultForScrollKeys;
+			}
+
+			function enableScroll() {
+				if (window.removeEventListener)
+					window.removeEventListener('DOMMouseScroll', preventDefault, false);
+				window.onmousewheel = document.onmousewheel = null;
+				window.onwheel = null;
+				window.ontouchmove = null;
+				document.onkeydown = null;
+			}
+
+			document.onload = disableScroll();
+			window.onbeforeunload = function () { window.scrollTo(0, 0); }
+			document.body.style.overflow = 'hidden';
+
+			// Example
+			var intro = d3.select("#intro");
+			var randomBox = intro.append("circle")
+				.attr("cx", 30)
+				.attr("cy", 30)
+				.attr("r", 20);
+
+			var width = 1050;
+			var height = 265;
+
+			// Code to load one person
+			var pplVis = d3.select("#pplVis");
+			for (var i = 0; i < 3; i++) {
+				for (var j = 0; j < 10; j++) {
+					if (i == 2 && j == 9) {
+						console.log(i);
+						pplVis.append("image")
+							.attr("href", "./images/man-white.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Jake");
+					} else {
+						var peoplePic = pplVis.append("image")
+							.attr("href", "./images/man.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "bob");
+					}
+				}
+			}
+
+			var width2 = 1150;
+			var height2 = 450;
+
+			// Code to load one person
+			var pplVis2 = d3.select("#pplVis2");
+			for (var i = 0; i < 5; i++) {
+				for (var j = 0; j < 50; j++) {
+					if (i == 2 && j == 3) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-yellow.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Kerry");
+					} else if (i == 3 && j == 25) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-red.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Panda");
+					} else if (i == 1 && j == 30) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-blue.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Jennifer");
+					} else if (i == 4 && j == 12) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-purple.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Theresa");
+					} else if (i == 0 && j == 22) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-purple.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Sabrina");
+					} else {
+						var peoplePic = pplVis2.append("image")
+							.attr("href", "./images/man-white.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "bob");
+					}
+				}
+
+			}
+
+			pplVis2.selectAll("image")
+				.on("mouseover", function () {
+					if ("Kerry" == this.id) {
+						audioh1.play();
+					} else if ("Panda" == this.id) {
+						audioh2.play();
+					} else if ("Sabrina" == this.id) {
+						audioh3.play();
+					} else if ("Theresa" == this.id) {
+						audioh4.play();
+					} else if ("Jennifer" == this.id) {
+						audioh5.play();
+					} else {
+						audio.play();
+					}
+				})
+				.on("mouseout", function () {
+					audioh1.pause();
+					audioh1.currentTime = 0;
+					audioh2.pause();
+					audioh2.currentTime = 0;
+					audioh3.pause();
+					audioh3.currentTime = 0;
+					audioh4.pause();
+					audioh4.currentTime = 0;
+					audioh5.pause();
+					audioh5.currentTime = 0;
+					audio.pause();
+					audio.currentTime = 0;
+				});
+
+			var audio = new Audio('audios/John Cena Sound Clip.mp3');
+			//var audioSrc = new Audio('audios/Jennifer.mp3');
+			var city = new Audio('audios/City-Sounds.mp3');
+			var city1 = new Audio('audios/Clip-1.mp3');
+			var city2 = new Audio('audios/Clip-2.mp3');
+			var city3 = new Audio('audios/Clip-3.mp3');
+			var city4 = new Audio('audios/Clip-4.mp3');
+			city.volume = 0.3;
+
+			// function getSoundAndFadeAudio (audio) {
+
+			// 	var sound = document.getElementById(audio);
+
+			// 	// Set the point in playback that fadeout begins. This is for a 2 second fade out.
+			// 	var fadePoint = sound.duration - 2;
+
+			// 	var fadeAudio = setInterval(function () {
+
+			// 		// Only fade if past the fade out point or not at zero already
+			// 		if ((sound.currentTime >= fadePoint) && (sound.volume != 0.0)) {
+			// 			sound.volume -= 0.1;
+			// 		}
+			// 		// When volume at zero stop all the intervalling
+			// 		if (sound.volume === 0.0) {
+			// 			clearInterval(fadeAudio);
+			// 		}
+			// 	}, 200);
+			// }
+
+			// function fade() {
+			// 	if (audio.volume > 1) {
+			// 		audio.volume -= 0.1;
+			// 		setTimeout(fade, 500);
+
+
+
+			pplVis.selectAll("image")
+				.on("mouseover", function () {
+					d3.select("#headline").text(this.id);
+					if ("Jake" != this.id) {
+						audio.play();
+						//getSoundAndFadeAudio('CENA');
+						//fade();
+
+					} else {
+						audio.volume = 0.7;
+					}
+				});
+
+			var audioh1 = new Audio('audios/Kerry.mp3');
+			var audioh2 = new Audio('audios/Panda.mp3');
+			var audioh3 = new Audio('audios/Sabrina.mp3');
+			var audioh4 = new Audio('audios/Theresa.mp3');
+			var audioh5 = new Audio('audios/Jennifer.mp3');
+			// window.scrollTo(500, 0);
+
+			pplVis.selectAll("image")
+				.on("mouseover", function () {
+					d3.select("#headline").text(this.id);
+					if ("Jake" != this.id) {
+						audio.play();
+						//getSoundAndFadeAudio('CENA');
+						//fade();
+					} else {
+						audioh5.play();
+					}
+				}
+				)
+				.on("mouseout", function () {
+					d3.select("#headline").text("Select Person For Story");
+					audio.pause();
+					audio.currentTime = 0;
+					audioh5.pause();
+					audioh5.currentTime = 0;
+				});
+
+			var sabrina = new Audio('audios/Sabrina.mp3');
+
+		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
+		// Map : Fix Later
+
+		// var svg = d3.select("$#vis").append("svg")
+
+		// var projection = d3.geoMercator();
+
+		// var path = d3.geoPath().projection(projection);
+
+		// var url = "./data/map-1.json";
+
+		// d3.json(url, function (err, geojson) {
+		// 	svg.append("path").attr("d", path(geojson));
+		// })
+
+
+		// D3 Map
+
+		// var width = 960,
+		// 	height = 500;
+
+		// var projection = d3.geo.mercator()
+		// 	.center([0, 5])
+		// 	.scale(900)
+		// 	.rotate([-180, 0]);
+
+		// var svg = d3.select("#vis").append("svg")
+		// 	.attr("width", width)
+		// 	.attr("height", height);
+
+		// var path = d3.geo.path()
+		// 	.projection(projection);
+
+		// var g = svg.append("g");
+
+		// // load and display the World
+		// d3.json("/data/map-1.json", function (error, topology) {
+		// 	g.selectAll("path")
+		// 		.data(topojson.object(topology, topology.objects.countries)
+		// 			.geometries)
+		// 		.enter()
+		// 		.append("path")
+		// 		.attr("d", path)
+		// });
+		</script>
 </body>
 
 </html>
