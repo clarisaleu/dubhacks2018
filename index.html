@@ -22,20 +22,6 @@
 
 
 
-	<!-- Banner  HOW TO LOAD / APPEND SVG-->
-	<section id="banner">
-		<header>
-			<h2>Homelessness in Seattle</h2>
-			<p>An In Depth Look and Analysis</p>
-		</header>
-		<svg id="pplVis" width=850 height=300></svg>
-		<p id="headline">Select Person To View Their Story</p>
-		<footer>
-			<a href="#first" class="button style2 scrolly">Learn More</a>
-		</footer>
-	</section>
-
-	<!-- Header
 	<section id="header">
 		<header>
 			<h1>Homelessness in Seattle</h1>
@@ -44,7 +30,21 @@
 		<footer>
 			<a href="#banner" class="button style2 scrolly-middle">Learn More</a>
 		</footer>
-	</section> -->
+	</section>
+
+	<!-- Banner  HOW TO LOAD / APPEND SVG-->
+	<section id="banner">
+		<header>
+			<h2>1 in 30 People Are Homeless in the Seattle Area...</h2>
+			<p></p>
+		</header>
+		<svg id="pplVis" width=850 height=300></svg>
+		<p id="headline">Select Person To View Their Story</p>
+		<footer>
+			<a href="#first" class="button style2 scrolly">Learn More</a>
+		</footer>
+	</section>
+
 
 	<!-- Banner -->
 	<section id="banner3">
@@ -398,7 +398,7 @@
 						.attr("width", 70)
 						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
-						.attr("id", "jake");
+						.attr("id", "Jake");
 				} else {
 					var peoplePic = pplVis.append("image")
 						.attr("href", "./man.png")
@@ -419,7 +419,7 @@
 			})
 
 		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
-		// Map
+		// Map : Fix Later
 		var svg = d3.select("#banner3").append("svg")
 
 		var projection = d3.geoMercator();
