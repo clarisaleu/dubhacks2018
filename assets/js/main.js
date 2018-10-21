@@ -45,6 +45,12 @@
       return breakpoints.active('<=mobile') ? 70 : 190;
     }
   });
+  $('.scrolly-5').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 70;
+    }
+  });
 
   $('.scrolly-3').scrolly({
     speed: 1000,
@@ -56,7 +62,7 @@
   $('.scrolly-2').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : 00;
+      return breakpoints.active('<=mobile') ? 70 : -60;
     }
   });
 
