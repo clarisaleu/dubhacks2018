@@ -488,20 +488,52 @@
 		// Code to load one person
 		var pplVis2 = d3.select("#pplVis2");
 		for (var i = 0; i < 5; i++) {
-			for (var j = 0; j < 15; j++) {
-				if (i == 2 && j == 9) {
+			for (var j = 0; j < 50; j++) {
+				if (i == 2 && j == 3) {
 					console.log(i);
-					pplVis.append("image")
-						.attr("href", "./man-white.png")
+					pplVis2.append("image")
+						.attr("href", "./man-gray.png")//"./man-yellow.png")
 						.attr("width", 70)
-						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
 						.attr("id", "Jake");
+				} else if (i == 3 && j == 25) {
+					console.log(i);
+					pplVis2.append("image")
+						.attr("href", "./man-gray.png")//"./man-red.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3))
+						.attr("id", "Jake-2");
+				} else if (i == 1 && j == 30) {
+					console.log(i);
+					pplVis2.append("image")
+						.attr("href", "./man-gray.png")//"./man-blue.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3))
+						.attr("id", "Jake-2");
+				} else if (i == 4 && j == 12) {
+					console.log(i);
+					pplVis2.append("image")
+						.attr("href", "./man-gray.png")//"./man-purple.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3))
+						.attr("id", "Jake-2");
+				} else if (i == 0 && j == 22) {
+					console.log(i);
+					pplVis2.append("image")
+						.attr("href", "./man-gray.png")//"./man-purple.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3))
+						.attr("id", "Jake-2");
 				} else {
 					var peoplePic = pplVis2.append("image")
-						.attr("href", "./man.png")
+						.attr("href", "./man-white.png")
 						.attr("width", 70)
-						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
 						.attr("id", "bob");
 				}
