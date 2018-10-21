@@ -171,17 +171,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-/* 
-.first-vis {
-  position: relative;
-  color: #fff;
-  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
-  text-align: center;
-  background: #35b88f url('images/banner.svg') bottom center no-repeat;
-  padding: 5em 0 5em 0;
-  margin: 0;
-  background-size: 125% auto;
-} */
+
 body {
   background-color: #183026;
   background-image: url('images/overlay.png'), url('../../images/bg.jpg');
@@ -1998,6 +1988,8 @@ button.style3:hover,
   left: 0;
 }
 
+.bigger {
+}
 .box.style1.left .inner {
   margin-right: 50%;
   padding-right: 3em;
@@ -2059,6 +2051,150 @@ button.style3:hover,
 }
 
 .box.style3 header {
+  text-align: center;
+}
+
+/* box-body */
+.box-body {
+  position: relative;
+  margin-top: 7em;
+  /* margin-bottom: 0; */
+}
+
+.box-body:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -9em;
+  left: 50%;
+  height: 9em;
+  /* border-left: solid 1px #fff; */
+}
+
+.box-body:before {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 66px;
+  position: absolute;
+  left: 50%;
+  top: -4.5em;
+  margin-left: -45px;
+  margin-top: -33px;
+}
+
+.box-body :last-child {
+  margin-bottom: 0;
+}
+
+.box-body.style1 {
+  background: #fff;
+  padding: 3em;
+}
+
+.box-body.style1 .image {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #152e33;
+  overflow: hidden;
+}
+
+.box-body.style1 .image img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: auto;
+}
+
+.box-body.style1 .inner > :last-child {
+  margin: 0;
+}
+
+.box-body.style1.right .image {
+  left: 0;
+}
+
+.box-body.style1.right .image img {
+  right: 0;
+}
+
+.box-body.style1.right .inner {
+  margin-left: 50%;
+  padding-left: 3em;
+}
+
+.box-body.style1.left .image {
+  right: 0;
+}
+
+.box-body.style1.left .image img {
+  left: 0;
+}
+
+.box-body.style1.left .inner {
+  margin-right: 50%;
+  padding-right: 3em;
+}
+
+.box-body.style2 {
+  text-align: center;
+}
+
+.box-body.style2 header {
+  display: inline-block;
+  background: #fff;
+  padding: 2em 3em 2em 3em;
+  margin: 0;
+}
+
+.box-body.style2 header p {
+  padding: 0;
+}
+
+.box-body.style2 .inner {
+  position: relative;
+  padding: 40px 0 0px 0;
+}
+
+.box-body.style2 .inner:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  /* border-left: solid 1px #fff; */
+}
+
+.box-body.style2 .inner .row {
+  position: relative;
+}
+
+.box-body.style2 .inner .row:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: calc(100% - 40px);
+  /* border-bottom: solid 1px #fff; */
+}
+
+.box-body.style2 .inner .image {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.box-body.style3 {
+  background: #fff;
+  padding: 3em;
+}
+
+.box-body.style3 header {
   text-align: center;
 }
 
@@ -2212,14 +2348,15 @@ body.is-preload #header footer {
   /* background: #152e33; */
   /* blue: #35b88f */
   /* background: rgba(255, 255, 255, 0.1); */
-  /* background: #32846a url('images/banner.svg') bottom center no-repeat; */
+  /* background: url('images/banner.svg') bottom center no-repeat; */
   /* padding: 5em 0 5em 0; */
   /* margin: 0; */
-  background-size: 100% auto !important;
+  background-size: 140% auto !important;
 }
 
 .first-vis .button {
   color: #35b882;
+  margin-bottom: 50px !important;
   text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25);
 }
 
@@ -2229,6 +2366,11 @@ body.is-preload #header footer {
 .first-vis header h2 {
   font-weight: 300;
   font-size: 1.1em;
+  letter-spacing: 8px;
+}
+.first-vis header h1 {
+  font-weight: 400;
+  font-size: 1.75em;
   letter-spacing: 8px;
 }
 
@@ -2247,6 +2389,51 @@ body.is-preload #header footer {
 
 .first-vis a:hover {
   border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+/* Banner */
+
+.banner-2nd {
+  position: relative !important;
+  color: #fff !important;
+  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25) !important;
+  text-align: center !important;
+  background: #35b88f url('images/banner.svg') bottom center no-repeat !important;
+  padding: 5em 0 5em 0 !important;
+  margin: 0 !important;
+  background-size: 125% auto !important;
+}
+
+.banner-2nd .button {
+  color: #35b882 !important;
+  text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25) !important;
+}
+
+.banner-2nd header {
+  margin: 0 0 2em 0 !important;
+}
+
+.banner-2nd header h2 {
+  font-weight: 400 !important;
+  font-size: 1.75em !important;
+  letter-spacing: 8px !important;
+}
+
+.banner-2nd p {
+  margin: 0 !important;
+}
+
+.banner-2nd footer {
+  margin: 2em 0 0 0 !important;
+}
+
+.banner-2nd a {
+  color: inherit !important;
+  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.banner-2nd a:hover {
+  border-bottom-color: rgba(255, 255, 255, 0) !important;
 }
 
 /* Banner */
@@ -2466,7 +2653,10 @@ body.is-preload #header footer {
     center;
   color: #fff !important;
 }
-
+.padding-p {
+  padding-top: 40px;
+  margin: 0;
+}
 .poptrox-popup:hover .closer {
   opacity: 0.5;
 }
