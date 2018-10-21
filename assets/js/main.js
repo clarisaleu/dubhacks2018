@@ -45,6 +45,12 @@
       return breakpoints.active('<=mobile') ? 70 : 190;
     }
   });
+  $('.scrolly-55').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 5;
+    }
+  });
   $('.scrolly-5').scrolly({
     speed: 1000,
     offset: function() {
