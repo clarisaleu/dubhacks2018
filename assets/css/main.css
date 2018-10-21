@@ -2279,6 +2279,12 @@ button.style3:hover,
   margin: 0;
   width: 100%;
 }
+.space-fix-top {
+  margin-top: 80px;
+}
+.space-fix-botton {
+  margin-bottom: 80px;
+}
 
 #header footer:after {
   content: '';
@@ -2657,12 +2663,21 @@ body.is-preload #header footer {
     center;
   color: #fff !important;
 }
+
+.space-fix-top-1 {
+  margin-top: 100px !important;
+}
+.padded-frame {
+  margin-top: 85px;
+}
 .centeredbtn {
   text-align: center !important;
   margin-left: 38%;
+  margin-bottom: 100px;
 }
 .style-intro-1 {
-  padding-top: 150px;
+  margin-top: 275px;
+  padding-top: 130px;
   text-align: center;
   color: white;
   font-weight: 500;

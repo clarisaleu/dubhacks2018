@@ -22,79 +22,61 @@
 	<section id="header">
 		<header>
 			<h1>A Public Project: Homeless in Seattle</h1>
-			<p>What are you waiting for...?</p>
+			<p>What are you waiting for?</p>
 		</header>
 		<footer>
-			<a href="#banner" onclick=c ity.play();city1.play(); class="button style2 scrolly-middle">Learn More</a>
+			<a href="#banner" onclick= city.play();city1.play(); class="button style2 scrolly-middle">Learn More</a>
 		</footer>
 	</section>
-
-
-
-
 
 	<!-- Banner  HOW TO LOAD / APPEND SVG (2nd visual) -->
 	<section id="banner">
 		<article>
 			<header>
+				<div class="space-fix-top"></div>
 				<h2>1 in 30 People Are Homeless in the Seattle Area...</h2>
 			</header>
 			<svg id="pplVis" width=1050 height=265></svg>
 			<footer>
 				<a href="#second" onclick=city2.play() class="button style2 scrolly-3">Next</a>
+				<div class="space-fix-bottom"></div>
 			</footer>
 		</article>
 	</section>
 
 	<section id="second" class="box-body">
 		<header>
+			<div class="space-fix-top"></div>
 			<h2 class="style-intro-1">Most people know how big of a social issue homelessness is, however a lot of people don't understand what it's actually
-				like to be homeless...</h2>
+				like to be homeless</h2>
 		</header>
 		<footer>
-			<a href="#second-1" class="button style1 scrolly-45 centeredbtn">Listen to their stories</a>
+			<a href="#second-2" class="button style1 scrolly-45 centeredbtn">Listen to their stories</a>
+			<div class="space-fix-bottom"></div>
+			<div class="space-fix-bottom"></div>
 		</footer>
-
 	</section>
-
-
-	<section id="second-1" class="banner-2nd">
-	  <article>
-	    <header>
-	      <iframe width="1200" height="550" frameborder="0" style="border:0" src="/total.html"></iframe>
-	    </header>
-	    <footer>
-	      <a href="#second-2" class="button style2 scrolly-55">Next</a>
-	    </footer>
-	  </article>
-	</section>
-
-
 	<!-- 1/30 -->
 
 	<section id="second-2" class=" box-body first-vis">
 		<header>
-			<h1>Meet Sabrina...</h1>
+			<h1 class="space-fix-top-1">Meet Sabrina...</h1>
 			<!-- <h2>1 in 30 People Are Homeless in the Seattle Area...</h2> -->
 			<!-- <p class="padding-p">Homeless people are a diverese varied group in terms of their backgrounds.</p> -->
 		</header>
 		<img onmouseover=audioh3.play(); class="img-big" src="images/man-white.png">
 		<!-- <p id="headline">Select Person To View Their Story</p> -->
 		<footer>
-			<a href="#third-3" onclick=c ity3.play();audioh3.pause(); class="button style2 scrolly-2">Next</a>
+			<a href="#second-12" onclick= city3.play();audioh3.pause(); class="button style2 scrolly-2">Next</a>
 		</footer>
 	</section>
 
 
-
-
-
-
 	<!-- In depth look at people-->
-	<section id="third-3" class="banner-2nd">
+	<section id="second-12" class="banner-2nd">
 		<article>
 			<header>
-				<h2> Hover to hear their stories...</h2>
+				<h2> Hover to hear their stories</h2>
 			</header>
 			<svg id="pplVis2" width=1350 height=450></svg>
 			<footer>
@@ -104,12 +86,35 @@
 	</section>
 
 
-	<section id="fourth-4" class="box-body first-vis">
+
+	<section id="fourth-4" class="banner-2nd padded-frame">
+		<article>
+			<header>
+				<iframe width="1200" height="550" frameborder="0" class="padded-frame" style="border:0" src="/total.html"></iframe>
+			</header>
+			<footer>
+				<a href="#third-31" class="button style2 scrolly-555">Next</a>
+			</footer>
+		</article>
+	</section>
+
+
+
+
+
+
+
+	<section id="third-31" class="box-body first-vis">
 		<header>
-			<h1 id="vis">Available Resources in Seattle</h1>
+			<!-- <h1 id="vis">Available Resources in Seattle</h1>
 			<iframe width="1200" height="550" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCpDY2_16tkbiyAzzJEloJ3e1uGxdcmU4M&q=homeless+in+Seattle"
 			 allowfullscreen>
-			</iframe>
+			</iframe> -->
+			<!-- <video width="1200" height="550" controls>
+				<source src="images/video-1540140031.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video> -->
+			<img src = "images\gif.gif" alt = "Picture of a happy monkey" />
 		</header>
 
 		<footer>
@@ -121,20 +126,7 @@
 
 
 
-	<!-- Feature 1
-	<article id="fourth" class="container box style1 right">
-		<a href="#" class="image fit">
-			<img src="images/pic01.jpg" alt="" />
-		</a>
-		<div class="inner">
-			<header>
-				<h2>Lorem ipsum
-					<br /> dolor sit amet</h2>
-			</header>
-			<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit
-				tempus etiam.</p>
-		</div>
-	</article> -->
+
 
 	<!-- Feature 2 -->
 	<article id="fourth" class="container box style1 left">
@@ -151,24 +143,40 @@
 			</p>
 		</div>
 	</article>
+	<!-- Feature 1 -->
+	<article class="container box style1 right">
+		<a href="#" class="image fit">
+			<img src="images/panda.PNG" alt="" />
+		</a>
+		<div class="inner">
+			<header>
+				<h2>Profiles
+					<br/> Panda</h2>
+			</header>
+			<p>Given his disabilities, Panda is unable to work. As a single dad, he raised two children. After they grew up and moved
+				out, he no longer qualified for Section 8 Housing Choice Voucher and ended up on the streets. Panda wanted to be involved
+				in something good that helps people who suffer from chronic homelessness. He has since moved into Seattle’s Tent City
+				5.
+			</p>
+		</div>
+	</article>
 
 
-
-	<article class="container box style3">
+	<!-- <article class="container box style3">
 		<header>
-			<h2>Community Highlights</h2>
+			<h2>Profiles</h2>
 		</header>
 		<section>
 			<header>
-				<h3>Josh Jacob James</h3>
-				<p>Member</p>
+				<h3>Josh Panda</h3>
+				<img src="./images/panda.PNG">
 			</header>
 			<p>Description</p>
 		</section>
 		</section>
 	</article>
 
-
+ -->
 
 	<!-- Payment -->
 	<article class="container box style3">
@@ -362,8 +370,8 @@
 		document.onload = disableScroll();
 		// force scroll to top - james
 		window.onbeforeunload = function () { window.scrollTo(0, 0); }
-		$(document).ready(function(){
-    	$(this).scrollTop(0);
+		$(document).ready(function () {
+			$(this).scrollTop(0);
 		});
 		// hide scrollbar
 		document.body.style.overflow = 'hidden';
@@ -491,7 +499,7 @@
 				audio.currentTime = 0;
 			});
 
-		var audio = new Audio('audios/John Cena Sound Clip.mp3');
+		var audio = new Audio('audios/John Cena Sound Cli.mp3');
 		//var audioSrc = new Audio('audios/Jennifer.mp3');
 		var city = new Audio('audios/City-Sounds.mp3');
 		var city1 = new Audio('audios/Clip-1.mp3');
@@ -520,21 +528,11 @@
 		// 	}, 200);
 		// }
 
-		// function fade() {
-		// 	if (audio.volume > 1) {
-		// 		audio.volume -= 0.1;
-		// 		setTimeout(fade, 500);
-
-
-
 		pplVis.selectAll("image")
 			.on("mouseover", function () {
 				d3.select("#headline").text(this.id);
 				if ("Jake" != this.id) {
 					audio.play();
-					//getSoundAndFadeAudio('CENA');
-					//fade();
-
 				} else {
 					audio.volume = 0.7;
 				}
@@ -566,8 +564,6 @@
 				audioh5.pause();
 				audioh5.currentTime = 0;
 			});
-
-		var sabrina = new Audio('audios/Sabrina.mp3');
 
 		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
 		// Map : Fix Later
