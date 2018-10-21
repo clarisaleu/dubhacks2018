@@ -21,8 +21,8 @@
 <body class="is-preload">
 	<section id="header">
 		<header>
-			<h1>A Public Project: Homelessness in Seattle</h1>
-			<p>An In Depth Look and Analysis Using Data Visualization</p>
+			<h1>A Public Project: Homeless in Seattle</h1>
+			<p>Slogan</p>
 		</header>
 		<footer>
 			<a href="#banner" class="button style2 scrolly-middle">Learn More</a>
@@ -76,15 +76,15 @@
 
 
 
-	<!-- Banner  HOW TO LOAD / APPEND SVG (2nd visual) -->
+	<!-- In depth look at people-->
 	<section id="third-3" class="banner-2nd">
 		<article>
 			<header>
-				<h2>Testing</h2>
+
 			</header>
-			<img class="img-big" src="man-white.png">
+			<svg id="pplVis2" width=1350 height=450></svg>
 			<footer>
-				<a href="#third" class="button style2 scrolly">Next</a>
+				<a href="#fourth" class="button style2 scrolly">Next</a>
 			</footer>
 		</article>
 	</section>
@@ -92,7 +92,7 @@
 
 
 	<!-- Feature 1 -->
-	<article id="first" class="container box style1 right">
+	<article id="fourth" class="container box style1 right">
 		<a href="#" class="image fit">
 			<img src="images/pic01.jpg" alt="" />
 		</a>
@@ -180,8 +180,8 @@
 	<!-- Contact -->
 	<article class="container box style3">
 		<header>
-			<h2>Nisl sed ultricies</h2>
-			<p>Diam dignissim lectus eu ornare volutpat orci.</p>
+			<h2>Contact Homeless In Seattle Inc.</h2>
+			<p>Questions, Comments, Concerns, & Suggestions</p>
 		</header>
 		<form method="post" action="#">
 			<div class="row gtr-50">
@@ -368,6 +368,24 @@
 	</article>
 
 
+	<!-- PAYMENT  
+	<form id="paymentForm" method="POST" action="https://YourServer/PathToExistingPaymentProcessingScript">
+		<input type="text" name="cardNumber" id="cardNumber" placeholder="cardNumber" />
+		<br>
+		<br>
+		<input type="text" name="expMonth" id="expMonth" placeholder="expMonth" />
+		<br>
+		<br>
+		<input type="text" name="expYear" id="expYear" placeholder="expYear" />
+		<br>
+		<br>
+		<input type="text" name="cardCode" id="cardCode" placeholder="cardCode" />
+		<br>
+		<br>
+		<input type="hidden" name="dataValue" id="dataValue" />
+		<input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+		<button>Pay</button>
+	</form> -->
 
 
 	<section id="footer">
@@ -427,6 +445,8 @@
 	<script src="https://d3js.org/topojson.v2.min.js"></script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.js"></script>
+	<script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8">
+	</script>
 	<script>
 
 		// Example
@@ -462,9 +482,35 @@
 			}
 		}
 
+		var width2 = 1150;
+		var height2 = 450;
+
+		// Code to load one person
+		var pplVis2 = d3.select("#pplVis2");
+		for (var i = 0; i < 5; i++) {
+			for (var j = 0; j < 15; j++) {
+				if (i == 2 && j == 9) {
+					console.log(i);
+					pplVis.append("image")
+						.attr("href", "./man-white.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3))
+						.attr("id", "Jake");
+				} else {
+					var peoplePic = pplVis2.append("image")
+						.attr("href", "./man.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3))
+						.attr("id", "bob");
+				}
+			}
+		}
+
 		var audio = new Audio('audios/John Cena Sound Clip.mp3');
 
-		function playAudio (hobo) {
+		function playAudio(hobo) {
 			if (hobo != "") {
 				console.log(hobo);
 				audio.play();
@@ -476,12 +522,12 @@
 		}
 
 		var audioArray = new Array(
-			new Audio('audios/Kerry.mp3'), 
-			new Audio('audios/Panda.mp3'), 
-			new Audio('audios/Sabrina.mp3'), 
-			new Audio('audios/Theresa.mp3'), 
+			new Audio('audios/Kerry.mp3'),
+			new Audio('audios/Panda.mp3'),
+			new Audio('audios/Sabrina.mp3'),
+			new Audio('audios/Theresa.mp3'),
 			new Audio('audios/Jennifer.mp3')
-			);
+		);
 
 		// window.scrollTo(500, 0);
 
