@@ -2316,7 +2316,7 @@ body.is-preload #header footer {
 }
 
 .img-big {
-  margin: 0;
+  margin-bottom: 50px;
   width: 215px;
 }
 
@@ -2652,6 +2652,17 @@ body.is-preload #header footer {
   background: rgba(255, 255, 255, 0.1) url('images/poptrox-closer.svg') center
     center;
   color: #fff !important;
+}
+.centeredbtn {
+  text-align: center !important;
+  margin-left: 38%;
+}
+.style-intro-1 {
+  padding-top: 150px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  padding-bottom: 150px;
 }
 .padding-p {
   padding-top: 40px;
