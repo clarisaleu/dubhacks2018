@@ -47,7 +47,7 @@
 	</section>
 
 
-	
+
 	<!-- 1/30 -->
 
 	<section id="second" class=" box-body first-vis">
@@ -64,7 +64,7 @@
 	</section>
 
 
-	<!-- Banner 
+	<!-- Banner
 	<section id="banner3">
 		<header>
 			<h2>Where are they?</h2>
@@ -82,7 +82,7 @@
 			</header>
 			<svg id="pplVis2" width=1350 height=450></svg>
 			<footer>
-				<a href="#fourth" class="button style2 scrolly">Next</a>
+				<a href="#fourth" class="button style2 scrolly" onclick="enableScroll();document.body.style.overflow = 'visible';">Next</a>
 			</footer>
 		</article>
 	</section>
@@ -157,7 +157,7 @@
 				</div>
 				<div class="col-4 col-12-mobile">
 					<a href="images/linh-full.jpg" class="image fit">
-						<img src="images/linh.jpg" alt="" title="Linh Vuu recently graduated from Cornell with a degree in Economics." />
+						<img src="images/linh.jpg" alt="" title="Linh Vuu is an incoming IBM IoT Consultant who recently graduated from Cornell University." />
 					</a>
 				</div>
 
@@ -196,7 +196,7 @@
 
 
 
-	<!-- 
+	<!--
 
 	<article class="container box style3">
 		<header>
@@ -357,7 +357,7 @@
 	</article> -->
 
 
-	<!-- PAYMENT  
+	<!-- PAYMENT
 	<form id="paymentForm" method="POST" action="https://YourServer/PathToExistingPaymentProcessingScript">
 		<input type="text" name="cardNumber" id="cardNumber" placeholder="cardNumber" />
 		<br>
@@ -437,6 +437,45 @@
 	<script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8">
 	</script>
 	<script>
+	// left: 37, up: 38, right: 39, down: 40,
+	// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+		var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+		function preventDefault(e) {
+		  e = e || window.event;
+		  if (e.preventDefault)
+		      e.preventDefault();
+		  e.returnValue = false;
+		}
+
+		function preventDefaultForScrollKeys(e) {
+		    if (keys[e.keyCode]) {
+		        preventDefault(e);
+		        return false;
+		    }
+		}
+
+		function disableScroll() {
+		  if (window.addEventListener) // older FF
+		      window.addEventListener('DOMMouseScroll', preventDefault, false);
+		  window.onwheel = preventDefault; // modern standard
+		  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+		  window.ontouchmove  = preventDefault; // mobile
+		  document.onkeydown  = preventDefaultForScrollKeys;
+		}
+
+		function enableScroll() {
+		    if (window.removeEventListener)
+		        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+		    window.onmousewheel = document.onmousewheel = null;
+		    window.onwheel = null;
+		    window.ontouchmove = null;
+		    document.onkeydown = null;
+		}
+
+		document.onload = disableScroll();
+		window.onbeforeunload = function(){ window.scrollTo(0,0); }
+		document.body.style.overflow = 'hidden';
 
 		// Example
 		var intro = d3.select("#intro");
@@ -574,7 +613,7 @@
 		// 	var sound = document.getElementById(audio);
 
 		// 	// Set the point in playback that fadeout begins. This is for a 2 second fade out.
-		// 	var fadePoint = sound.duration - 2; 
+		// 	var fadePoint = sound.duration - 2;
 
 		// 	var fadeAudio = setInterval(function () {
 
@@ -597,7 +636,7 @@
     		    audio.volume = 0.7;
    			}
 		}
-					
+
 		var audioh1 = new Audio('audios/Kerry.mp3');
 		var audioh2 = new Audio('audios/Panda.mp3');
 		var audioh3 = new Audio('audios/Sabrina.mp3');
