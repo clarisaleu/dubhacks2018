@@ -25,7 +25,7 @@
 			<p>What are you waiting for...?</p>
 		</header>
 		<footer>
-			<a href="#banner" onclick=c ity.play();city1.play(); class="button style2 scrolly-middle">Learn More</a>
+			<a href="#banner" onclick= city.play();city1.play(); class="button style2 scrolly-middle">Learn More</a>
 		</footer>
 	</section>
 
@@ -97,10 +97,14 @@
 
 	<section id="fourth-4" class="box-body first-vis">
 		<header>
-			<h1 id="vis">Available Resources in Seattle</h1>
+			<!-- <h1 id="vis">Available Resources in Seattle</h1>
 			<iframe width="1200" height="550" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCpDY2_16tkbiyAzzJEloJ3e1uGxdcmU4M&q=homeless+in+Seattle"
 			 allowfullscreen>
-			</iframe>
+			</iframe> -->
+			<video width="1200" height="550" controls>
+				<source src="images/video-1540140031.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
 		</header>
 
 		<footer>
@@ -476,7 +480,7 @@
 				audio.currentTime = 0;
 			});
 
-		var audio = new Audio('audios/John Cena Sound Clip.mp3');
+		var audio = new Audio('audios/John Cena Sound Cli.mp3');
 		//var audioSrc = new Audio('audios/Jennifer.mp3');
 		var city = new Audio('audios/City-Sounds.mp3');
 		var city1 = new Audio('audios/Clip-1.mp3');
@@ -551,8 +555,6 @@
 				audioh5.pause();
 				audioh5.currentTime = 0;
 			});
-
-		var sabrina = new Audio('audios/Sabrina.mp3');
 
 		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
 		// Map : Fix Later
