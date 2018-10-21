@@ -29,6 +29,7 @@
 			<p>An In Depth Look and Analysis</p>
 		</header>
 		<svg id="pplVis" width=850 height=300></svg>
+		<p id="headline">Select Person To View Their Story</p>
 		<footer>
 			<a href="#first" class="button style2 scrolly">Learn More</a>
 		</footer>
@@ -398,20 +399,34 @@
 		for (var i = 0; i < 3; i++) {
 			for (var j = 0; j < 10; j++) {
 				if (i == 2 && j == 9) {
+					console.log(i);
 					pplVis.append("image")
 						.attr("href", "./man-white.png")
 						.attr("width", 70)
 						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3));
+						.attr("y", i * (height / 3))
+						.attr("id", "jake");
 				} else {
 					var peoplePic = pplVis.append("image")
 						.attr("href", "./man.png")
 						.attr("width", 70)
 						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3));
+						.attr("y", i * (height / 3))
+						.attr("id", "bob");
 				}
 			}
 		}
+
+		pplVis.selectAll("image")
+			.on("mouseover", function () {
+				d3.select("#headline").text(this.id)
+			})
+			.on("mouseout", function () {
+				d3.select("#headline").text("Select Person For Story")
+			})
+
+		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
+
 	</script>
 </body>
 
