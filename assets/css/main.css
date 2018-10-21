@@ -2663,14 +2663,14 @@ body.is-preload #header footer {
     center;
   color: #fff !important;
 }
-.fixes{
+.fixes {
   margin-bottom: 50px;
 }
 .space-fix-top-1 {
   margin-top: 100px !important;
 }
 .padded-frame {
-  margin-top: 5px;
+  margin-top: -10px;
 }
 .images-maps {
   width: 1100px !important;
