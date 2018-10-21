@@ -48,13 +48,13 @@
   $('.scrolly-55').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : -5;
+      return breakpoints.active('<=mobile') ? 70 : -55;
     }
   });
   $('.scrolly-555').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : 175;
+      return breakpoints.active('<=mobile') ? 70 : 15;
     }
   });
   $('.scrolly-5').scrolly({
