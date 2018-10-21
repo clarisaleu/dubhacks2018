@@ -78,6 +78,12 @@
       return breakpoints.active('<=mobile') ? 70 : -60;
     }
   });
+  $('.scrolly-25').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 200;
+    }
+  });
 
   // Parallax background.
 

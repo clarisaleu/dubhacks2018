@@ -2302,6 +2302,9 @@ button.style3:hover,
   margin-bottom: -33px;
   background: url('images/arrow.svg') no-repeat;
 }
+.donate {
+  margin-left: 100%;
+}
 
 body.is-preload #header {
   opacity: 0;
