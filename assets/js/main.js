@@ -48,7 +48,13 @@
   $('.scrolly-55').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : 5;
+      return breakpoints.active('<=mobile') ? 70 : -5;
+    }
+  });
+  $('.scrolly-555').scrolly({
+    speed: 1000,
+    offset: function() {
+      return breakpoints.active('<=mobile') ? 70 : 175;
     }
   });
   $('.scrolly-5').scrolly({
@@ -61,14 +67,14 @@
   $('.scrolly-3').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : 140;
+      return breakpoints.active('<=mobile') ? 70 : 190;
     }
   });
 
   $('.scrolly-45').scrolly({
     speed: 1000,
     offset: function() {
-      return breakpoints.active('<=mobile') ? 70 : 150;
+      return breakpoints.active('<=mobile') ? 70 : 205;
     }
   });
   //Scrolly2

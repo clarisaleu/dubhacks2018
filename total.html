@@ -32,16 +32,15 @@
 
   #header h1 {
     font-family: Helvetica, sans-serif;
-    font-size: 40px;
-    color: #000000;
+    font-size: 50px;
+    color: #625e5b;
     margin-top: 0px;
     margin-bottom: 5px;
   }
 
   #header p {
-    font-family: Georgia, serif;
+    font-family: Helvetica, serif;
     font-size: 20px;
-    font-style: italic;
     color: #ffffff;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -50,7 +49,7 @@
   #footer {
     height: 22px;
     line-height: 22px;
-    font-family: Georgia, serif;
+    font-family: Helvetica, serif;
     font-size: 12px;
     color: #625e5b;
     background-color: #e6e2df;
@@ -74,7 +73,7 @@
   }
 
   .dropdown {
-    color: #635f5d;
+    color: #625e5b;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     padding-right: 12px;
@@ -104,6 +103,7 @@
 
   .axis--x {
     font-size: 2vw;
+    font-color:#000000;
   }
 
   .label {
@@ -121,6 +121,34 @@
   .axis--y .tick line {
     stroke: white;
   }
+
+  .bar {
+    fill: #4682b4;
+  }
+
+  .bar:hover{
+    fill: #17bf3c;
+  }
+
+  .tooltip{
+    background: #b0c4de;
+    border: 0;
+    border-radius: 8px;
+    font-family: $font;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    padding: 2px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: 120px;
+  }
+
+  span{
+    color: #d11515;
+  }
+
 
   @media screen and (max-width: 500px) {
     .axis--x {
@@ -155,7 +183,7 @@
     <h1>Homeless in Washington</h1>
     <div class="dropdown" id="year"><label>Year: </label><select></select></div>
   </div>
-  <p>Visualizing the Washington homeless population over the past decade</p>
+  <p>The 2017 Annual Homeless Assessment Report to Congress has revealed that "homelessness has increased for the first time in seven years," in which national chronic homelessness has risen by 12%. To address the crisis, the City of Seattle has committed more than $63 million over the last four years to establish affordable housing, cleanup programs, and emergency services for the homeless. The data allows us to visualize the effect of these coordinated efforts on the varying classifications of homelessness.</p>
 </div>
 <div id="chart"></div>
 <div id="footer">
@@ -233,11 +261,11 @@ Housing and Urban Development</i></span>
         var ratio = (width - 500) / (800 - 500);
         var clampedRatio = Math.max(0, Math.min(1, ratio));
 
-        var marginBottom = 120 + 48 * clampedRatio;
+        var marginBottom = 80 + 48 * clampedRatio;
         var marginLeft = 120 + 24 * clampedRatio;
 
         var margin = {
-          top: 3,
+          top: 5,
           right: 8,
           bottom: marginBottom,
           left: marginLeft
@@ -331,12 +359,23 @@ Housing and Urban Development</i></span>
           .attr("height", function (d) { return chartHeight - y(d.value); })
           .style("fill", function (d) { return "#35b88f"; });
 
+        const tooltip = d3.select('body').append('div')
+          .attr('class', 'tooltip')
+          .style('opacity', 0);
+
         bars.enter()
           .append("rect")
           .attr("class", "bar")
           .attr("x", function (d) { return x(d.key); })
           .attr("y", function (d) { return y(0); })
           .attr("width", x.bandwidth())
+          .on('mouseover', (d) => {
+            tooltip.transition().duration(200).style('opacity', 0.9);
+            tooltip.html(`<span>${d.value}</span> people`)
+              .style('left', `${d3.event.layerX}px`)
+              .style('top', `${(d3.event.layerY - 28)}px`);
+            })
+          .on('mouseout', () => tooltip.transition().duration(500).style('opacity', 0))
           .style("fill", function (d) { return "#35b88f"; })
           .transition(t)
           .delay(duration)
