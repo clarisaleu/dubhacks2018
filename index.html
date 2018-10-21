@@ -56,10 +56,10 @@
 			<!-- <h2>1 in 30 People Are Homeless in the Seattle Area...</h2> -->
 			<!-- <p class="padding-p">Homeless people are a diverese varied group in terms of their backgrounds.</p> -->
 		</header>
-			<img onmouseover = sabrina.play(); class="img-big" src="man-white.png">
+			<img onmouseover = audioh3.play(); class="img-big" src="images/man-white.png">
 	<!-- <p id="headline">Select Person To View Their Story</p> -->
 		<footer>
-			<a href="#third-3" class="button style2 scrolly-2">Next</a>
+			<a href="#third-3" onclick= city3.play();audioh3.pause(); class="button style2 scrolly-2">Next</a>
 		</footer>
 	</section>
 
@@ -485,7 +485,7 @@
 						.attr("width", 70)
 						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
-						.attr("id", "Jake");
+						.attr("id", "Kerry");
 				} else if (i == 3 && j == 25) {
 					console.log(i);
 					pplVis2.append("image")
@@ -493,7 +493,7 @@
 						.attr("width", 70)
 						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
-						.attr("id", "Jake-2");
+						.attr("id", "Panda");
 				} else if (i == 1 && j == 30) {
 					console.log(i);
 					pplVis2.append("image")
@@ -501,7 +501,7 @@
 						.attr("width", 70)
 						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
-						.attr("id", "Jake-2");
+						.attr("id", "Jennifer");
 				} else if (i == 4 && j == 12) {
 					console.log(i);
 					pplVis2.append("image")
@@ -509,7 +509,7 @@
 						.attr("width", 70)
 						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
-						.attr("id", "Jake-2");
+						.attr("id", "Theresa");
 				} else if (i == 0 && j == 22) {
 					console.log(i);
 					pplVis2.append("image")
@@ -517,7 +517,7 @@
 						.attr("width", 70)
 						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
 						.attr("y", i * (height / 3))
-						.attr("id", "Jake-2");
+						.attr("id", "Sabrina");
 				} else {
 					var peoplePic = pplVis2.append("image")
 						.attr("href", "./images/man-white.png")
@@ -529,8 +529,39 @@
 			}
 		}
 
+		pplVis2.selectAll("image")
+			.on("mouseover", function () {
+				if ("Kerry" == this.id) {
+					audioh1.play();
+				} else if ("Panda" == this.id) {
+					audioh2.play();
+				} else if ("Sabrina" == this.id) {
+					audioh3.play();
+				} else if ("Theresa" == this.id) {
+					audioh4.play();
+				} else if ("Jennifer" == this.id) {
+					audioh5.play();
+				} else {
+					audio.play();
+				}
+			})
+			.on("mouseout", function () {
+				audioh1.pause();
+				audioh1.currentTime = 0;
+				audioh2.pause();
+				audioh2.currentTime = 0;
+				audioh3.pause();
+				audioh3.currentTime = 0;
+				audioh4.pause();
+				audioh4.currentTime = 0;
+				audioh5.pause();
+				audioh5.currentTime = 0;
+				audio.pause();
+				audio.currentTime = 0;
+			});
+
 		var audio = new Audio('audios/John Cena Sound Clip.mp3');
-		var audioSrc = new Audio('audios/Jennifer.mp3');
+		//var audioSrc = new Audio('audios/Jennifer.mp3');
 		var city = new Audio('audios/City-Sounds.mp3');
 		var city1 = new Audio('audios/Clip-1.mp3');
 		var city2 = new Audio('audios/Clip-2.mp3');
@@ -567,13 +598,11 @@
    			}
 		}
 					
-		var audioArray = new Array(
-			'audios/Kerry.mp3',
-			'audios/Panda.mp3',
-			'audios/Sabrina.mp3',
-			'audios/Theresa.mp3',
-			'audios/Jennifer.mp3'
-		);
+		var audioh1 = new Audio('audios/Kerry.mp3');
+		var audioh2 = new Audio('audios/Panda.mp3');
+		var audioh3 = new Audio('audios/Sabrina.mp3');
+		var audioh4 = new Audio('audios/Theresa.mp3');
+		var audioh5 = new Audio('audios/Jennifer.mp3');
 		// window.scrollTo(500, 0);
 
 		pplVis.selectAll("image")
@@ -584,7 +613,7 @@
 					//getSoundAndFadeAudio('CENA');
 					//fade();
 				} else {
-					audioSrc.play();
+					audioh5.play();
 				}
 			}
 			)
@@ -592,8 +621,8 @@
 				d3.select("#headline").text("Select Person For Story");
 				audio.pause();
 				audio.currentTime = 0;
-				audioSrc.pause();
-				audioSrc.currentTime = 0;
+				audioh5.pause();
+				audioh5.currentTime = 0;
 			});
 
 		var sabrina = new Audio('audios/Sabrina.mp3');
