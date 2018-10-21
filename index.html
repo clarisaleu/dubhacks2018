@@ -46,17 +46,10 @@
 	</section> -->
 
 	<!-- Banner -->
-	<section id="banner">
+	<section id="banner3">
 		<header>
-			<h2>Scope</h2>
-		</header>
-		<p>More than __ amount of individuals make up the underserved homeless population in Seattle, WA. In comparison, the average
-			homeless person per 100k in the United States is ____ amount of people. The purpose of this project is to help the general
-			public understand the severity of homelessness in the Seattle area through powerful visuals which hopefully speak for
-			themselves. We hope to provide the general public with a clear understanding of the scope of this issue in Seattle. The
-			purpose of this project is also to apply possible solutions to the homelessness in Sea</p>
-		<footer>
-			<a href="#first" class="button style2 scrolly">Act on this message</a>
+			<h2>Where are they?</h2>
+			
 		</footer>
 	</section>
 
@@ -404,6 +397,19 @@
 					.attr("y", i * (height / 3));
 			}
 		}
+
+		var svg = d3.select("#banner3").append("svg")
+    
+    	var projection = d3.geoMercator();
+    
+    	var path = d3.geoPath().projection(projection);
+      
+    	var url = "http://enjalot.github.io/wwsd/data/world/world-110m.geojson";
+    
+    	d3.json(url, function(err, geojson) {
+    	  svg.append("path").attr("d", path(geojson));
+    	})
+ 
 	</script>
 </body>
 
