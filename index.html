@@ -397,11 +397,19 @@
 		var pplVis = d3.select("#pplVis");
 		for (var i = 0; i < 3; i++) {
 			for (var j = 0; j < 10; j++) {
-				var peoplePic = pplVis.append("image")
-					.attr("href", "./man.png")
-					.attr("width", 70)
-					.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
-					.attr("y", i * (height / 3));
+				if (i == 2 && j == 9) {
+					pplVis.append("image")
+						.attr("href", "./man-white.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3));
+				} else {
+					var peoplePic = pplVis.append("image")
+						.attr("href", "./man.png")
+						.attr("width", 70)
+						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+						.attr("y", i * (height / 3));
+				}
 			}
 		}
 	</script>
