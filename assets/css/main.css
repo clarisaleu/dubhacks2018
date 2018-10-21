@@ -2308,6 +2308,7 @@ button.style3:hover,
 
 body.is-preload #header {
   opacity: 0;
+  /* margin:0; */
 }
 
 body.is-preload #header footer {
