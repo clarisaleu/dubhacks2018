@@ -60,6 +60,7 @@
 
 
 
+
 	<!-- 1/30 -->
 
 	<section id="second-1" class=" box-body first-vis">
@@ -77,13 +78,6 @@
 
 
 
-	<!-- Banner 
-	<section id="banner3">
-		<header>
-			<h2>Where are they?</h2>
-
-			</footer>
-	</section> -->
 
 
 
@@ -95,7 +89,7 @@
 			</header>
 			<svg id="pplVis2" width=1350 height=450></svg>
 			<footer>
-				<a href="#fourth-4" class="button style2 scrolly-55">Next</a>
+				<a href="#fourth-4" class="button style2 scrolly-55" onclick="enableScroll();document.body.style.overflow = 'visible';">Next</a>
 			</footer>
 		</article>
 	</section>
@@ -202,7 +196,8 @@
 				</div>
 				<div class="col-4 col-12-mobile">
 					<a href="images/linh-full.jpg" class="image fit">
-						<img src="images/linh.jpg" alt="" title="Linh Vuu recently graduated from Cornell with a degree in Economics." />
+						<img src="images/linh.jpg" alt="" title="Linh Vuu is an incoming IBM IoT Consultant who recently graduated from Cornell University."
+						/>
 					</a>
 				</div>
 
@@ -242,11 +237,12 @@
 
 
 
+	<<<<<<< HEAD=======< !-->>>>>>> 733f9c257099ef4b4596984383bf1ec8f8bd5912
 
 
 
 
-	<!-- PAYMENT  
+		<!-- PAYMENT
 	<form id="paymentForm" method="POST" action="https://YourServer/PathToExistingPaymentProcessingScript">
 		<input type="text" name="cardNumber" id="cardNumber" placeholder="cardNumber" />
 		<br>
@@ -266,255 +262,294 @@
 	</form> -->
 
 
-	<section id="footer">
-		<ul class="icons">
-			<li>
-				<a href="#" class="icon fa-twitter">
-					<span class="label">Twitter</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-facebook">
-					<span class="label">Facebook</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-google-plus">
-					<span class="label">Google+</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-pinterest">
-					<span class="label">Pinterest</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-dribbble">
-					<span class="label">Dribbble</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="icon fa-linkedin">
-					<span class="label">LinkedIn</span>
-				</a>
-			</li>
-		</ul>
-		<div class="copyright">
-			<ul class="menu">
-				<li>&copy; DubHacks 2018. All rights reserved.</li>
+		<section id="footer">
+			<ul class="icons">
 				<li>
-					<a href="https://clarisaleu.github.io/dubhacks2018">Homeless in Seattle</a>
+					<a href="#" class="icon fa-twitter">
+						<span class="label">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-facebook">
+						<span class="label">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-google-plus">
+						<span class="label">Google+</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-pinterest">
+						<span class="label">Pinterest</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-dribbble">
+						<span class="label">Dribbble</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-linkedin">
+						<span class="label">LinkedIn</span>
+					</a>
 				</li>
 			</ul>
-		</div>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; DubHacks 2018. All rights reserved.</li>
+					<li>
+						<a href="https://clarisaleu.github.io/dubhacks2018">Homeless in Seattle</a>
+					</li>
+				</ul>
+			</div>
 
-	</section>
+		</section>
 
-	<!-- Scripts -->
+		<!-- Scripts -->
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/topojson.v2.min.js"></script>
-	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.js"></script>
-	<script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8">
-	</script>
-	<script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/topojson.v2.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.js"></script>
+		<script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8">
+		</script>
+		<script>
+			// left: 37, up: 38, right: 39, down: 40,
+			// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+			var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
-		// Example
-		var intro = d3.select("#intro");
-		var randomBox = intro.append("circle")
-			.attr("cx", 30)
-			.attr("cy", 30)
-			.attr("r", 20);
+			function preventDefault(e) {
+				e = e || window.event;
+				if (e.preventDefault)
+					e.preventDefault();
+				e.returnValue = false;
+			}
 
-		var width = 1050;
-		var height = 265;
-
-		// Code to load one person
-		var pplVis = d3.select("#pplVis");
-		for (var i = 0; i < 3; i++) {
-			for (var j = 0; j < 10; j++) {
-				if (i == 2 && j == 9) {
-					console.log(i);
-					pplVis.append("image")
-						.attr("href", "./images/man-white.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "Jake");
-				} else {
-					var peoplePic = pplVis.append("image")
-						.attr("href", "./images/man.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "bob");
+			function preventDefaultForScrollKeys(e) {
+				if (keys[e.keyCode]) {
+					preventDefault(e);
+					return false;
 				}
 			}
-		}
 
-		var width2 = 1150;
-		var height2 = 450;
+			function disableScroll() {
+				if (window.addEventListener) // older FF
+					window.addEventListener('DOMMouseScroll', preventDefault, false);
+				window.onwheel = preventDefault; // modern standard
+				window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+				window.ontouchmove = preventDefault; // mobile
+				document.onkeydown = preventDefaultForScrollKeys;
+			}
 
-		// Code to load one person
-		var pplVis2 = d3.select("#pplVis2");
-		for (var i = 0; i < 5; i++) {
-			for (var j = 0; j < 50; j++) {
-				if (i == 2 && j == 3) {
-					console.log(i);
-					pplVis2.append("image")
-						.attr("href", "./images/man-gray.png")//"./man-yellow.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "Kerry");
-				} else if (i == 3 && j == 25) {
-					console.log(i);
-					pplVis2.append("image")
-						.attr("href", "./images/man-gray.png")//"./man-red.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "Panda");
-				} else if (i == 1 && j == 30) {
-					console.log(i);
-					pplVis2.append("image")
-						.attr("href", "./images/man-gray.png")//"./man-blue.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "Jennifer");
-				} else if (i == 4 && j == 12) {
-					console.log(i);
-					pplVis2.append("image")
-						.attr("href", "./images/man-gray.png")//"./man-purple.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "Theresa");
-				} else if (i == 0 && j == 22) {
-					console.log(i);
-					pplVis2.append("image")
-						.attr("href", "./images/man-gray.png")//"./man-purple.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "Sabrina");
-				} else {
-					var peoplePic = pplVis2.append("image")
-						.attr("href", "./images/man-white.png")
-						.attr("width", 70)
-						.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
-						.attr("y", i * (height / 3))
-						.attr("id", "bob");
+			function enableScroll() {
+				if (window.removeEventListener)
+					window.removeEventListener('DOMMouseScroll', preventDefault, false);
+				window.onmousewheel = document.onmousewheel = null;
+				window.onwheel = null;
+				window.ontouchmove = null;
+				document.onkeydown = null;
+			}
+
+			document.onload = disableScroll();
+			window.onbeforeunload = function () { window.scrollTo(0, 0); }
+			document.body.style.overflow = 'hidden';
+
+			// Example
+			var intro = d3.select("#intro");
+			var randomBox = intro.append("circle")
+				.attr("cx", 30)
+				.attr("cy", 30)
+				.attr("r", 20);
+
+			var width = 1050;
+			var height = 265;
+
+			// Code to load one person
+			var pplVis = d3.select("#pplVis");
+			for (var i = 0; i < 3; i++) {
+				for (var j = 0; j < 10; j++) {
+					if (i == 2 && j == 9) {
+						console.log(i);
+						pplVis.append("image")
+							.attr("href", "./images/man-white.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Jake");
+					} else {
+						var peoplePic = pplVis.append("image")
+							.attr("href", "./images/man.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 10))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "bob");
+					}
 				}
 			}
-		}
 
-		pplVis2.selectAll("image")
-			.on("mouseover", function () {
-				if ("Kerry" == this.id) {
-					audioh1.play();
-				} else if ("Panda" == this.id) {
-					audioh2.play();
-				} else if ("Sabrina" == this.id) {
-					audioh3.play();
-				} else if ("Theresa" == this.id) {
-					audioh4.play();
-				} else if ("Jennifer" == this.id) {
-					audioh5.play();
-				} else {
-					audio.play();
-				}
-			})
-			.on("mouseout", function () {
-				audioh1.pause();
-				audioh1.currentTime = 0;
-				audioh2.pause();
-				audioh2.currentTime = 0;
-				audioh3.pause();
-				audioh3.currentTime = 0;
-				audioh4.pause();
-				audioh4.currentTime = 0;
-				audioh5.pause();
-				audioh5.currentTime = 0;
-				audio.pause();
-				audio.currentTime = 0;
-			});
+			var width2 = 1150;
+			var height2 = 450;
 
-		var audio = new Audio('audios/John Cena Sound Clip.mp3');
-		//var audioSrc = new Audio('audios/Jennifer.mp3');
-		var city = new Audio('audios/City-Sounds.mp3');
-		var city1 = new Audio('audios/Clip-1.mp3');
-		var city2 = new Audio('audios/Clip-2.mp3');
-		var city3 = new Audio('audios/Clip-3.mp3');
-		var city4 = new Audio('audios/Clip-4.mp3');
-		city.volume = 0.3;
-
-		// function getSoundAndFadeAudio (audio) {
-
-		// 	var sound = document.getElementById(audio);
-
-		// 	// Set the point in playback that fadeout begins. This is for a 2 second fade out.
-		// 	var fadePoint = sound.duration - 2; 
-
-		// 	var fadeAudio = setInterval(function () {
-
-		// 		// Only fade if past the fade out point or not at zero already
-		// 		if ((sound.currentTime >= fadePoint) && (sound.volume != 0.0)) {
-		// 			sound.volume -= 0.1;
-		// 		}
-		// 		// When volume at zero stop all the intervalling
-		// 		if (sound.volume === 0.0) {
-		// 			clearInterval(fadeAudio);
-		// 		}
-		// 	}, 200);
-		// }
-
-		function fade() {
-			if (audio.volume > 1) {
-				audio.volume -= 0.1;
-				setTimeout(fade, 500);
-			} else {
-				audio.volume = 0.7;
-			}
-		}
-
-		var audioh1 = new Audio('audios/Kerry.mp3');
-		var audioh2 = new Audio('audios/Panda.mp3');
-		var audioh3 = new Audio('audios/Sabrina.mp3');
-		var audioh4 = new Audio('audios/Theresa.mp3');
-		var audioh5 = new Audio('audios/Jennifer.mp3');
-		// window.scrollTo(500, 0);
-
-		pplVis.selectAll("image")
-			.on("mouseover", function () {
-				d3.select("#headline").text(this.id);
-				if ("Jake" != this.id) {
-					audio.play();
-					//getSoundAndFadeAudio('CENA');
-					//fade();
-				} else {
-					audioh5.play();
+			// Code to load one person
+			var pplVis2 = d3.select("#pplVis2");
+			for (var i = 0; i < 5; i++) {
+				for (var j = 0; j < 50; j++) {
+					if (i == 2 && j == 3) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-yellow.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Kerry");
+					} else if (i == 3 && j == 25) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-red.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Panda");
+					} else if (i == 1 && j == 30) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-blue.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Jennifer");
+					} else if (i == 4 && j == 12) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-purple.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Theresa");
+					} else if (i == 0 && j == 22) {
+						console.log(i);
+						pplVis2.append("image")
+							.attr("href", "./images/man-gray.png")//"./man-purple.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "Sabrina");
+					} else {
+						var peoplePic = pplVis2.append("image")
+							.attr("href", "./images/man-white.png")
+							.attr("width", 70)
+							.attr("x", j * (width / 30))//textSvg.attr("width") / 2 + 470)
+							.attr("y", i * (height / 3))
+							.attr("id", "bob");
+					}
 				}
 			}
-			)
-			.on("mouseout", function () {
-				d3.select("#headline").text("Select Person For Story");
-				audio.pause();
-				audio.currentTime = 0;
-				audioh5.pause();
-				audioh5.currentTime = 0;
-			});
 
-		var sabrina = new Audio('audios/Sabrina.mp3');
+			pplVis2.selectAll("image")
+				.on("mouseover", function () {
+					if ("Kerry" == this.id) {
+						audioh1.play();
+					} else if ("Panda" == this.id) {
+						audioh2.play();
+					} else if ("Sabrina" == this.id) {
+						audioh3.play();
+					} else if ("Theresa" == this.id) {
+						audioh4.play();
+					} else if ("Jennifer" == this.id) {
+						audioh5.play();
+					} else {
+						audio.play();
+					}
+				})
+				.on("mouseout", function () {
+					audioh1.pause();
+					audioh1.currentTime = 0;
+					audioh2.pause();
+					audioh2.currentTime = 0;
+					audioh3.pause();
+					audioh3.currentTime = 0;
+					audioh4.pause();
+					audioh4.currentTime = 0;
+					audioh5.pause();
+					audioh5.currentTime = 0;
+					audio.pause();
+					audio.currentTime = 0;
+				});
+
+			var audio = new Audio('audios/John Cena Sound Clip.mp3');
+			//var audioSrc = new Audio('audios/Jennifer.mp3');
+			var city = new Audio('audios/City-Sounds.mp3');
+			var city1 = new Audio('audios/Clip-1.mp3');
+			var city2 = new Audio('audios/Clip-2.mp3');
+			var city3 = new Audio('audios/Clip-3.mp3');
+			var city4 = new Audio('audios/Clip-4.mp3');
+			city.volume = 0.3;
+
+			// function getSoundAndFadeAudio (audio) {
+
+			// 	var sound = document.getElementById(audio);
+
+			// 	// Set the point in playback that fadeout begins. This is for a 2 second fade out.
+			// 	var fadePoint = sound.duration - 2;
+
+			// 	var fadeAudio = setInterval(function () {
+
+			// 		// Only fade if past the fade out point or not at zero already
+			// 		if ((sound.currentTime >= fadePoint) && (sound.volume != 0.0)) {
+			// 			sound.volume -= 0.1;
+			// 		}
+			// 		// When volume at zero stop all the intervalling
+			// 		if (sound.volume === 0.0) {
+			// 			clearInterval(fadeAudio);
+			// 		}
+			// 	}, 200);
+			// }
+
+			function fade() {
+				if (audio.volume > 1) {
+					audio.volume -= 0.1;
+					setTimeout(fade, 500);
+				} else {
+					audio.volume = 0.7;
+				}
+			}
+
+			var audioh1 = new Audio('audios/Kerry.mp3');
+			var audioh2 = new Audio('audios/Panda.mp3');
+			var audioh3 = new Audio('audios/Sabrina.mp3');
+			var audioh4 = new Audio('audios/Theresa.mp3');
+			var audioh5 = new Audio('audios/Jennifer.mp3');
+			// window.scrollTo(500, 0);
+
+			pplVis.selectAll("image")
+				.on("mouseover", function () {
+					d3.select("#headline").text(this.id);
+					if ("Jake" != this.id) {
+						audio.play();
+						//getSoundAndFadeAudio('CENA');
+						//fade();
+					} else {
+						audioh5.play();
+					}
+				}
+				)
+				.on("mouseout", function () {
+					d3.select("#headline").text("Select Person For Story");
+					audio.pause();
+					audio.currentTime = 0;
+					audioh5.pause();
+					audioh5.currentTime = 0;
+				});
+
+			var sabrina = new Audio('audios/Sabrina.mp3');
 
 		//d3.on("mouseover", handleMouseOver(this.d, 1 + (i * 10) + j));
 		// Map : Fix Later
@@ -560,7 +595,7 @@
 		// 		.append("path")
 		// 		.attr("d", path)
 		// });
-	</script>
+		</script>
 </body>
 
 </html>
